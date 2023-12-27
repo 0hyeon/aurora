@@ -5,11 +5,6 @@ import Link from 'next/link'
 export default function Inner({ children }: { children: ReactNode }) {
   interface IAnim {
     [key: string]: {
-      // opacity?: number
-      // top?: string | number
-      // transition?: {
-      //   duration: number
-      // }
       [key: string]: any
     }
   }
@@ -76,11 +71,7 @@ export default function Inner({ children }: { children: ReactNode }) {
       <motion.div {...anim(perspective)} className={styles.page}>
         {/* opacity */}
         {/* <motion.div {...anim(opacity)}> */}
-        <div className="header">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
+
         {children}
         {/* </motion.div> */}
       </motion.div>
