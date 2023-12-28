@@ -1,5 +1,5 @@
 import Inner from '@/components/Layout/Inner'
-import Stair from '@/components/Layout/Stair'
+import Stair from '@/components/Layout/Stairs'
 import Head from 'next/head'
 import React from 'react'
 

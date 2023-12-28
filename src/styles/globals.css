@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  display: flex;
+  gap: 0.5em;
+  font-weight: bold;
+  margin: 0.5em;
+  font-size: 1rem;
+}
+h1 {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0.5em;
+}

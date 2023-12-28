@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Inner from '@/components/Layout/Inner'
-import Stair from '@/components/Layout/Stair'
+import Stair from '@/components/Layout/Stairs'
 export default function Home() {
   return (
     <>

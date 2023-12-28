@@ -1,0 +1,43 @@
+.stairs {
+  .transitionContainer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+
+    div {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      background-size: contain;
+    }
+    div:nth-of-type(1) {
+      background-image: url('../../../../public/KakaoTalk_20231228_231713362.jpg');
+    }
+    div:nth-of-type(2) {
+      background-image: url('../../../../public/KakaoTalk_20231228_235643041_01.jpg');
+    }
+    div:nth-of-type(3) {
+      background-image: url('../../../../public/KakaoTalk_20231228_235643041_02.jpg');
+    }
+    div:nth-of-type(4) {
+      background-image: url('../../../../public/KakaoTalk_20231228_235643041_03.jpg');
+    }
+    div:nth-of-type(5) {
+      background-image: url('../../../../public/KakaoTalk_20231228_235643041.jpg');
+    }
+  }
+  .background {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+}
