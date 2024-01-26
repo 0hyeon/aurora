@@ -1,3 +1,7 @@
 .main {
   padding-top: 175.2px;
 }
+.middleBox {
+  max-width: 1100px;
+  margin: 0 auto;
+}

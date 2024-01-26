@@ -51,7 +51,7 @@ export default function Slide() {
         slidesPerView={1} // 보여질 슬라이스 수
         navigation={true} // prev, next button
         autoplay={{
-          delay: 2500,
+          delay: 4200,
           disableOnInteraction: false, // 사용자 상호작용시 슬라이더 일시 정지 비활성
         }}
         onActiveIndexChange={(e) => setSwiperIndex(e.realIndex)}
