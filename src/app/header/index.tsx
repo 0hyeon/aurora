@@ -84,12 +84,12 @@ export default function Header() {
           </div>
         </div>
         <div>회사소개</div>
-        <div>회사소개</div>
-        <div>회사소개</div>
-        <div>회사소개</div>
-        <div>회사소개</div>
-        <div>회사소개</div>
-        <div>회사소개</div>
+        <div>라미봉투</div>
+        <div>에어캡봉투</div>
+        <div>안전봉투</div>
+        <div>보냉봉투</div>
+        <div>PE폼</div>
+        <div>커뮤니티</div>
       </div>
       <motion.div
         variants={background}
