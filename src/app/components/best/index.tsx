@@ -99,14 +99,9 @@ export default function Best() {
       >
         {slideData.map((slide) => (
           <div key={slide.id} className={style.SwiperWrap}>
-            <SwiperSlide>
+            <SwiperSlide key={slide.id}>
               <div className={style.imageWrapper}>
-                <Image
-                  alt={String(slide.id)}
-                  src={slide.src}
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image alt={String(slide.id)} src={slide.src} fill />
               </div>
               <div className={style.productBox}>
                 <div>{slide.text}</div>

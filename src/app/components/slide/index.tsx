@@ -59,15 +59,17 @@ export default function Slide() {
           setSwiper(e);
         }}
       >
-        {slideData.map((slide) => (
-          <div key={slide.id} className={style.SwiperWrap}>
-            <SwiperSlide>
+        {slideData.map((slide, idx) => (
+          <div key={idx} className={style.SwiperWrap}>
+            <SwiperSlide key={slide.id}>
               <div className={style.imageWrapper}>
                 <Image
                   alt={String(slide.id)}
                   src={slide.src}
-                  layout="fill"
-                  objectFit="cover"
+                  // height={203}
+                  // width={1080}
+                  fill
+                  // objectFit="cover"
                 />
               </div>
             </SwiperSlide>

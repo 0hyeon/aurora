@@ -41,9 +41,9 @@ export default function SlideSmall() {
           disableOnInteraction: false, // 사용자 상호작용시 슬라이더 일시 정지 비활성
         }}
       >
-        {slideData.map((slide) => (
-          <div key={slide.id} className={style.SwiperWrapImg}>
-            <SwiperSlide>
+        {slideData.map((slide, idx) => (
+          <div key={idx} className={style.SwiperWrapImg}>
+            <SwiperSlide key={slide.id}>
               <div style={{ height: 180 }}>
                 <Image
                   alt={String(slide.id)}

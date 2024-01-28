@@ -3,12 +3,11 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
-.swiper-slide {
+/* .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -21,4 +20,4 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-}
+} */
