@@ -1,0 +1,25 @@
+.hashtag_wrap {
+  margin: 40px 0;
+  padding: 20px 85px;
+  background: #eef3f8;
+  .hashtag_list {
+    display: flex;
+    gap: 10px;
+    .hashtag_list_li {
+      font-size: 18px;
+      flex: 1;
+      list-style: none;
+      .hashtag_list_a {
+        padding: 10px;
+        font-size: 18px;
+        color: #999;
+        display: block;
+        text-align: center;
+        box-shadow: 2px 3px 5px #00000014;
+        background-color: #fff;
+        border-radius: 25px;
+        font-size: medium;
+      }
+    }
+  }
+}

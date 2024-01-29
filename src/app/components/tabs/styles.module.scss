@@ -1,0 +1,53 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 12px;
+  border-bottom: 1px solid #909090;
+  align-items: center;
+
+  .tabButton {
+    display: flex;
+
+    .tab {
+      width: 150px;
+      padding: 1rem;
+      font-size: 22px;
+      color: #707070;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: -0.015em;
+      word-break: keep-all;
+      transition: transform 0.2s ease;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0; /* 중앙에서 시작하도록 변경 */
+        width: 0;
+        height: 0.6rem;
+        border-bottom: 2px solid transparent;
+        transform-origin: 50% 50%; /* 중심 축을 변경 */
+        transition: width 0.2s ease, border-bottom 0.2s ease;
+      }
+    }
+
+    .tab_on {
+      color: #305ae4;
+      font-weight: 700;
+
+      &::after {
+        border-bottom: 3px solid #305ae4;
+        width: 100%; /* 가상 요소의 너비를 100%로 변경하여 애니메이션 */
+      }
+    }
+  }
+}
