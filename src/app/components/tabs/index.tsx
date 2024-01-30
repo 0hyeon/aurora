@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { cls } from "@/app/libs/client/utils";
 import Best from "../best";
+import { slideData } from "@/app/static/data";
 
 type TabValue = "드시모네" | "또박케어LAB";
 const Tabs = () => {
@@ -35,7 +36,9 @@ const Tabs = () => {
           </div>
         </div>
       </div>
-      {method === "드시모네" ? <Best /> : null}
+      {method && (
+        <Best data={slideData.filter((el) => el.category === method)} />
+      )}
     </>
   );
 };

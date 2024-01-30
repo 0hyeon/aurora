@@ -5,6 +5,8 @@ import SlideSmall from "./components/slideSmall";
 import Best from "./components/best";
 import HashTag from "./components/hashtag";
 import Tabs from "./components/tabs";
+import { slideData } from "./static/data";
+import Youtube from "./components/youtube";
 
 export default function Home() {
   return (
@@ -12,9 +14,10 @@ export default function Home() {
       <Slide />
       <div className={styles.middleBox}>
         <SlideSmall />
-        <Best />
+        <Best data={slideData} />
         <HashTag />
         <Tabs />
+        <Youtube />
       </div>
     </main>
   );

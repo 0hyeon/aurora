@@ -69,7 +69,7 @@ export default function Slide() {
                   // height={203}
                   // width={1080}
                   fill
-                  // objectFit="cover"
+                  objectFit="cover"
                 />
               </div>
             </SwiperSlide>

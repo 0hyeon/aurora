@@ -8,7 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import style from "./styles.module.scss";
-export default function Best() {
+import { IslideData } from "@/app/types/type";
+import Link from "next/link";
+
+export default function Best({ data }: { data: IslideData[] }) {
   const [swiperIndex, setSwiperIndex] = useState(0); //페이지네이션
   const [swiper, setSwiper] = useState<SwiperClass>(); //슬라이드
   const handlePrev = () => {
@@ -31,56 +34,6 @@ export default function Best() {
     const result = price * minusNumber;
     return result;
   };
-  const slideData = [
-    {
-      id: 1,
-      text: "[6개월 매월또박] 드시모네 키즈 스텝1 블루베리/딸기/사과 중 택1",
-      src: "/images/202401031646580_popular_goods.png",
-      price: 78000,
-      sale: 15,
-      reviews: 1247,
-    },
-    {
-      id: 2,
-      text: "[6개월 매월또박] 드시모네 키즈 스텝1 블루베리/딸기/사과 중 택1",
-      src: "/images/202401031646580_popular_goods.png",
-      price: 78000,
-      sale: 15,
-      reviews: 1247,
-    },
-    {
-      id: 3,
-      text: "[6개월 매월또박] 드시모네 키즈 스텝1 블루베리/딸기/사과 중 택1",
-      src: "/images/202401031646580_popular_goods.png",
-      price: 78000,
-      sale: 15,
-      reviews: 1247,
-    },
-    {
-      id: 4,
-      text: "[6개월 매월또박] 드시모네 키즈 스텝1 블루베리/딸기/사과 중 택1",
-      src: "/images/202401031646580_popular_goods.png",
-      price: 78000,
-      sale: 15,
-      reviews: 1247,
-    },
-    {
-      id: 5,
-      text: "[6개월 매월또박] 드시모네 키즈 스텝1 블루베리/딸기/사과 중 택1",
-      src: "/images/202401031646580_popular_goods.png",
-      price: 78000,
-      sale: 15,
-      reviews: 1247,
-    },
-    {
-      id: 6,
-      text: "[6개월 매월또박] 드시모네 키즈 스텝1 블루베리/딸기/사과 중 택1",
-      src: "/images/202401031646580_popular_goods.png",
-      price: 78000,
-      sale: 15,
-      reviews: 1247,
-    },
-  ];
   return (
     <div className={style.SwiperWrapMain}>
       <Swiper
@@ -97,25 +50,38 @@ export default function Best() {
           setSwiper(e);
         }}
       >
-        {slideData.map((slide) => (
-          <div key={slide.id} className={style.SwiperWrap}>
-            <SwiperSlide key={slide.id}>
-              <div className={style.imageWrapper}>
-                <Image alt={String(slide.id)} src={slide.src} fill />
-              </div>
-              <div className={style.productBox}>
-                <div>{slide.text}</div>
-                <div className={style.priceBox}>
-                  <div className={style.leftPriceBox}>{slide.price}원</div>
-                  <div className={style.rightPriceBox}>
-                    {DiscountPrice(slide.sale, slide.price)}원
+        {data &&
+          data.map((slide) => (
+            <div key={slide.id} className={style.SwiperWrap}>
+              <SwiperSlide key={slide.id}>
+                <Link
+                  href={`/product-details/${slide.id}`}
+                  style={{ textDecoration: "none", color: "unset" }}
+                >
+                  <div className={style.imageWrapper}>
+                    <Image alt={String(slide.id)} src={slide.src} fill />
                   </div>
-                </div>
-                <div className={style.reviewBox}>(리뷰{slide.reviews}개)</div>
-              </div>
-            </SwiperSlide>
-          </div>
-        ))}
+                  <div className={style.productBox}>
+                    <div>{slide.text}</div>
+                    <div className={style.priceBox}>
+                      <div className={style.leftPriceBox}>
+                        {slide.price.toLocaleString("ko-kr")}원
+                      </div>
+                      <div className={style.rightPriceBox}>
+                        {DiscountPrice(slide.sale, slide.price).toLocaleString(
+                          "ko-kr"
+                        )}
+                        원
+                      </div>
+                    </div>
+                    <div className={style.reviewBox}>
+                      (리뷰{slide.reviews}개)
+                    </div>
+                  </div>
+                </Link>
+              </SwiperSlide>
+            </div>
+          ))}
       </Swiper>
     </div>
   );
