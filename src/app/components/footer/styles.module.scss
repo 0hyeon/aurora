@@ -1,0 +1,27 @@
+.footer_top {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+  .footer_ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    li {
+      list-style: none;
+      border-left: 1px solid #000;
+      margin-left: 15px;
+      padding-left: 15px;
+    }
+    li:nth-of-type(1) {
+      margin-left: 0px;
+      padding-left: 0px;
+      border-left: none;
+    }
+  }
+}
+.footer_middle {
+  display: flex;
+}
+.footer_botton {
+  display: flex;
+}

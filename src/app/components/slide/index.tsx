@@ -69,7 +69,8 @@ export default function Slide() {
                   // height={203}
                   // width={1080}
                   fill
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
+                  //objectFit="cover"
                 />
               </div>
             </SwiperSlide>
